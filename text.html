@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Стили для рисунков */
+    .image {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <img class="image" src="image1.jpg" name="image1" style="z-index: 1;">
+  <img class="image" src="image2.jpg" name="image2" style="z-index: 2;">
+  <img class="image" src="image3.jpg" name="image3" style="z-index: 3;">
+
+  <button onclick="hideMiddleImage()">Скрыть средний рисунок</button>
+  <button onclick="showMiddleImage()">Показать средний рисунок</button>
+  <button onclick="swapImages()">Поменять слои</button>
+
+  <script>
+    function hideMiddleImage() {
+      var middleImage = document.getElementsByName("image2")[0];
+      middleImage.style.display = "none";
+    }
+
+    function showMiddleImage() {
+      var middleImage = document.getElementsByName("image2")[0];
+      middleImage.style.display = "block";
+    }
+
+    function swapImages() {
+      var image1 = document.getElementsByName("image1")[0];
+      var image2 = document.getElementsByName("image2")[0];
+
+      var tempZIndex = image1.style.zIndex;
+      image1.style.zIndex = image2.style.zIndex;
+      image2.style.zIndex = tempZIndex;
+    }
+  </script>
+</body>
+</html>
