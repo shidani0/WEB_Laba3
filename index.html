@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Лабораторная работа 3 Комракова Евгения</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>Задание 1: Продажа игр</h1>
+      <div class="text1zad">
+        <p>Следующие игры представлены на продажу. Наведите курсор и увидите название игры в соответсвующем поле.</p>
+      </div>
+  
+
+ <title>Document</title>
+    <style>
+        img{width: 320px; height: 260px; padding:10px}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="main_pic/Rust-logo.png" onmouseover="document.getElementById('Text').value='Rust'" onmouseout="document.getElementById('Text').value=''">
+        <img src="main_pic/Dota.webp" onmouseover="document.getElementById('Text').value='DOTA'" onmouseout="document.getElementById('Text').value=''"><br>
+        <img src="main_pic/CS.jpg" onmouseover="document.getElementById('Text').value='CS:GO'" onmouseout="document.getElementById('Text').value=''">
+        <img src="main_pic/Apex.jpg" onmouseover="document.getElementById('Text').value='Apex Legends'" onmouseout="document.getElementById('Text').value=''"><br>
+        <div class = "textboxstyle">
+        <input type="text" id="Text">
+      </div>
+    </div>
+</body>
+</html>
+
+<head>
+<style> img{width:200;height:200}
+    .hidden {
+      display: none;
+    }
+  
+    .show-on-hover:hover .hidden {
+      display: block;
+    }
+
+</style>
+<script>
+i=0; 
+function slideShow() 
+{ 
+// массив картинок
+ris = new Array('main_pic/Rust-logo.png', 'main_pic/Dota.webp', 'main_pic/CS.jpg', 'main_pic/Apex.jpg'); 
+// Проверяем, Не вышел ли счётчик за пределы массива 
+if (i >= 4)   i = 0; // если вышел, обнуляем счётчик. 
+//переменная r объект с именем slide
+r=document.getElementById('slide')
+// Меняем свойство src этого объекта на элемент из массива 
+r.src=ris[i];   
+i++;   // Увеличиваем счётчик
+// вызываем эту же функцию через каждые 1500 мс
+}
+</script>
+</head>
+<body>
+<h1> Задание 2: Слайд-шоу </h1>
+<img id='slide'  src="main_pic/Rust-logo.png" />
+<form>
+  <div class = buttonstyle>
+<input type="button" value=" Перейти " onClick="slideShow() ;">
+</div>
+
+
+<h1>Задание 3: Таблица</h1>
+
+<table>
+  <tr>
+    <td class="show-on-hover">Настоящий детектив
+  
+    <img src="main_pic/11.jpg" class = "hidden" alt=" cat " style="position: relative; left: 200px; top:0px;">
+  </td>
+  </tr>
+  <tr>
+    <td class="show-on-hover">Властелин колец
+  
+    <img src="main_pic/22.jpg" class = "hidden" alt=" dog " style="position: relative; left: 200px; top:0px;">
+  </td>
+  </tr>
+  <tr>
+    <td class="show-on-hover">Остров проклятых
+  
+    <img src="main_pic/33.jpg" class = "hidden" alt=" homyak " style="position: relative; left: 200px; top:0px;">
+  </td>
+  </tr>
+</table>
+<div class = imgcatdog>
+<img hidden src="main_pic/11.jpg" style.visibility = 'hidden'> 
+  <img hidden src="main_pic/22.jpg" style.visibility = 'visible'>
+  <img hidden src="main_pic/33.jpg" style.visibility = 'visible'>
+</div>
+
+<h1>Задание 4: Слайд-шоу 2</h1>
+
+<script>
+  i=0; 
+  function slideShow2() 
+  { 
+  // массив картинок
+  ris2 = new Array('main_pic/11.jpg', 'main_pic/22.jpg', 'main_pic/33.jpg'); 
+  // Проверяем, Не вышел ли счётчик за пределы массива 
+  if (i >= 3)   i = 0; // если вышел, обнуляем счётчик. 
+  //переменная r объект с именем slide
+  r=document.getElementById('slide2')
+  // Меняем свойство src этого объекта на элемент из массива 
+  r.src=ris2[i];   
+  i++;   // Увеличиваем счётчик
+  // вызываем эту же функцию через каждые 1500 мс
+  }
+  </script>
+
+  <img id='slide2'  src="main_pic/11.jpg" />
+<form>
+  <div class = buttonstyle>
+<input type="button" value=" Перейти " onClick="slideShow2() ;">
+</div>
+
+
+<h1>Задание 5: Математика</h1>
+
+<li>
+  <a href="calc.html">Перейти в калькулятор</a>
+</li>
+
+<h1>Задание 6: Текущий день недели</h1>
+<li>
+  <a href="dayweekyear.html">Узнать сегодняшний день недели</a>
+</li>
+
+<h1>Задание 7: Дни жизни</h1>
+<li>
+  <a href="daysoflife.html">Перейти к расчету</a>
+</li>
+
+<h1>Задание 8: Координаты</h1>
+<li>
+  <a href="dottostart.html">Перейти к расчету</a>
+</li>
+
+<h1>Задание  9: День недели моего дня рождения</h1>
+<li>
+  <a href="drDAY.html">Узнать день недели своего дня рождения</a>
+</li>
+
+<h1>Задание  10: Площадь прямоугольника</h1>
+<li>
+  <a href="ploshad.html">Перейти к расчету площади</a>
+</li>
+
+<h1>Задание  11: Форма для страницы</h1>
+<li>
+  <a href="form.html">Перейти в редактор формы</a>
+</li>
+
+<h1>Задание  12: Форма для описания художника</h1>
+<li>
+  <a href="hudozhnik.html">Перейти в редактор формы для создания художника</a>
+</li>
+
+<h1>Задание  13: Форма для создания биографии</h1>
+<li>
+  <a href="bio.html">Перейти в редактор биографии</a>
+</li>
+
+<h1>Задание  14: Форма для создания сказки</h1>
+<li>
+  <a href="fairytale.html">Перейти в редактор сказки</a>
+</li>
+</form></body>
+  </main>
+  </div> 
+</body>
+</html>
